@@ -10,5 +10,9 @@ Every user story that relevantly requires updating the documentation should expl
 
 
 ## Code Etiquite
-You should try to make each component modular, assembling it in a **NEW** scene whenever possible and exporting it as a prefab. This way whenever someone begins to integrade it with the rest of the project; we can minimize same-scene editing and merge conflicts.
+You should try to make each component modular, assembling it in a **NEW** scene (Not one of the prexisting ones) whenever possible and exporting it as a prefab. This way whenever someone begins to integrade it with the rest of the project; we can minimize same-scene editing and merge conflicts.
+
+Your code should use tripple slash comments with XML descriptors for API documentation (Visual Studio can generate this for you).
+
+You are also required to modify the documentation to describe how to use your new or modified feature in the [Manual](../Manual/) section.
 
