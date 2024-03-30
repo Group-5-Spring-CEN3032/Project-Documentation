@@ -11,8 +11,8 @@ Now in the Inspector tab, you should see a component you can control the values 
 
 ![alt text](../img/SplashControllerExample.png)
 
-**Delay:** The number of seconds the splash screen will wait. You can set this to 0 to make it as instant as unity can handle.
-**Next Scene:** The _exact_ *case sensitive* name of the scene you want the splash screen to change too when it's done.
+- **Delay:** The number of seconds the splash screen will wait. You can set this to 0 to make it as instant as unity can handle.
+- **Next Scene:** The _exact_ *case sensitive* name of the scene you want the splash screen to change too when it's done.
 
 
 ## Main Menu
