@@ -1,1 +1,2 @@
 # Manual
+Here we've recorded explanations and descriptions of all the components of the project. The point is to give new users a place to get started and learn what our framework has to offer without having to dig in and read the code.
