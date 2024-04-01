@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Team Policies - RolePlaying Game Framework Documentation</title>
+        <title>Player Movement - RolePlaying Game Framework Documentation</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -33,45 +33,45 @@
                             <li class="navitem">
                                 <a href="../.." class="nav-link">Welcome to Our Roleplaying Game Framework</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../Manual/" class="dropdown-item">Manual</a>
+    <a href="../" class="dropdown-item">Manual</a>
 </li>
                                     
 <li>
-    <a href="../../Manual/Included%20Defaults/" class="dropdown-item">Included Defaults</a>
+    <a href="../Included%20Defaults/" class="dropdown-item">Included Defaults</a>
 </li>
                                     
 <li>
-    <a href="../../Manual/Language/" class="dropdown-item">Language</a>
+    <a href="../Language/" class="dropdown-item">Language</a>
 </li>
                                     
 <li>
-    <a href="../../Manual/Pausing%20API/" class="dropdown-item">Pausing Manager</a>
+    <a href="../Pausing%20API/" class="dropdown-item">Pausing Manager</a>
 </li>
                                     
 <li>
-    <a href="../../Manual/Player%20Movement/" class="dropdown-item">Player Movement</a>
+    <a href="./" class="dropdown-item active">Player Movement</a>
 </li>
                                     
 <li>
-    <a href="../../Manual/Statistics/" class="dropdown-item">Entity Statistics</a>
+    <a href="../Statistics/" class="dropdown-item">Entity Statistics</a>
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Team Policies <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../How%20to%20Contribute%20to%20Documentation/" class="dropdown-item">How to Contribute to Documentation</a>
+    <a href="../../Team%20Policies/How%20to%20Contribute%20to%20Documentation/" class="dropdown-item">How to Contribute to Documentation</a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Team Policies</a>
+    <a href="../../Team%20Policies/Team%20Policies/" class="dropdown-item">Team Policies</a>
 </li>
                                 </ul>
                             </li>
@@ -93,12 +93,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../How%20to%20Contribute%20to%20Documentation/" class="nav-link">
+                                <a rel="prev" href="../Pausing%20API/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../Training/Unity3d/" class="nav-link">
+                                <a rel="next" href="../Statistics/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -120,17 +120,9 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#team-policies" class="nav-link">Team Policies</a>
+            <li class="nav-item" data-level="1"><a href="#player-movement" class="nav-link">Player Movement</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#writen-documentation" class="nav-link">Writen Documentation</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#in-code-documentation" class="nav-link">In-Code Documentation</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#code-etiquite" class="nav-link">Code Etiquite</a>
+            <li class="nav-item" data-level="2"><a href="#modifyable-variables" class="nav-link">Modifyable Variables</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -141,15 +133,22 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="team-policies">Team Policies</h1>
-<h2 id="writen-documentation">Writen Documentation</h2>
-<p>Every user story, the team members assigned to a specific user story are responsible for maintaining the relevant documentation pages that pertain to that user story.</p>
-<p>Every user story that relevantly requires updating the documentation should explicilty state updating the documentation as one of the requirements.</p>
-<h2 id="in-code-documentation">In-Code Documentation</h2>
-<h2 id="code-etiquite">Code Etiquite</h2>
-<p>You should try to make each component modular, assembling it in a <strong>NEW</strong> scene (Not one of the prexisting ones) whenever possible and exporting it as a prefab. This way whenever someone begins to integrade it with the rest of the project; we can minimize same-scene editing and merge conflicts.</p>
-<p>Your code should use tripple slash comments with XML descriptors for API documentation (Visual Studio can generate this for you).</p>
-<p>You are also required to modify the documentation to describe how to use your new or modified feature in the <a href="../Manual/">Manual</a> section.</p></div>
+<h1 id="player-movement">Player Movement</h1>
+<p>Our <code>PlayerMovementController</code> is a simple First-Person player controller similar to many games of the genre. The controller uses the <a href="https://docs.unity3d.com/ScriptReference/Input.html">Unity Input API</a> to make configuring it's signals for different devices easier.</p>
+<p>The movement Controller also correctly responds to the <a href="../Pausing%20API/">Pausing API</a>! Any inputs given while the game is paused will be completely ignored, you must explicitly make the call to unpause the game from your pause menu.</p>
+<h2 id="modifyable-variables">Modifyable Variables</h2>
+<p>These variables are open to your configuration to customize your controller for your game.</p>
+<ul>
+<li><strong>Camera Axis:</strong> A reference to the camera, or parent of the camera that should be directly rotated for vertical view rotation. The entire player object is rotated for horizontal view rotation.</li>
+<li><strong>Mouse Sensitivity:</strong> A flat multiplier for the X and Y movement of the mouse respectively.</li>
+<li><strong>DegreesPerSecondLookSpeed:</strong> The number of degrees per second the player's view is allowed to rotate.</li>
+<li><strong>Max Angle:</strong> The furthest upward the player is able to look along the Y-Axis.</li>
+<li><strong>Min Angle:</strong> The furthest downward the player is able to look along the Y-Axis.</li>
+<li><strong>Movement Mult:</strong> A flat multiplier of player movement.</li>
+<li><strong>Jump Force:</strong> A flat multiplier of the instantaneous physics force applied to perform a jump. You can think of this of the <em>amount</em> of force one pushes off the ground to perform a jump.</li>
+<li><strong>Time Between Jumps:</strong> The time in seconds that must elapse between two jumps.</li>
+<li><strong>Ground Detection Distance:</strong> The approximate distance from the bottom of the player a ground collider must be in order for a player to be considered "on the ground".</li>
+</ul></div>
             </div>
         </div>
 

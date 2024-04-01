@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Team Policies - RolePlaying Game Framework Documentation</title>
+        <title>Entity Statistics - RolePlaying Game Framework Documentation</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -33,45 +33,45 @@
                             <li class="navitem">
                                 <a href="../.." class="nav-link">Welcome to Our Roleplaying Game Framework</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Manual <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../Manual/" class="dropdown-item">Manual</a>
+    <a href="../" class="dropdown-item">Manual</a>
 </li>
                                     
 <li>
-    <a href="../../Manual/Included%20Defaults/" class="dropdown-item">Included Defaults</a>
+    <a href="../Included%20Defaults/" class="dropdown-item">Included Defaults</a>
 </li>
                                     
 <li>
-    <a href="../../Manual/Language/" class="dropdown-item">Language</a>
+    <a href="../Language/" class="dropdown-item">Language</a>
 </li>
                                     
 <li>
-    <a href="../../Manual/Pausing%20API/" class="dropdown-item">Pausing Manager</a>
+    <a href="../Pausing%20API/" class="dropdown-item">Pausing Manager</a>
 </li>
                                     
 <li>
-    <a href="../../Manual/Player%20Movement/" class="dropdown-item">Player Movement</a>
+    <a href="../Player%20Movement/" class="dropdown-item">Player Movement</a>
 </li>
                                     
 <li>
-    <a href="../../Manual/Statistics/" class="dropdown-item">Entity Statistics</a>
+    <a href="./" class="dropdown-item active">Entity Statistics</a>
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Team Policies <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../How%20to%20Contribute%20to%20Documentation/" class="dropdown-item">How to Contribute to Documentation</a>
+    <a href="../../Team%20Policies/How%20to%20Contribute%20to%20Documentation/" class="dropdown-item">How to Contribute to Documentation</a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Team Policies</a>
+    <a href="../../Team%20Policies/Team%20Policies/" class="dropdown-item">Team Policies</a>
 </li>
                                 </ul>
                             </li>
@@ -93,12 +93,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../How%20to%20Contribute%20to%20Documentation/" class="nav-link">
+                                <a rel="prev" href="../Player%20Movement/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../Training/Unity3d/" class="nav-link">
+                                <a rel="next" href="../../Team%20Policies/How%20to%20Contribute%20to%20Documentation/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -120,20 +120,8 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#team-policies" class="nav-link">Team Policies</a>
+            <li class="nav-item" data-level="1"><a href="#entity-statistics" class="nav-link">Entity Statistics</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#writen-documentation" class="nav-link">Writen Documentation</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#in-code-documentation" class="nav-link">In-Code Documentation</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#code-etiquite" class="nav-link">Code Etiquite</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -141,15 +129,9 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="team-policies">Team Policies</h1>
-<h2 id="writen-documentation">Writen Documentation</h2>
-<p>Every user story, the team members assigned to a specific user story are responsible for maintaining the relevant documentation pages that pertain to that user story.</p>
-<p>Every user story that relevantly requires updating the documentation should explicilty state updating the documentation as one of the requirements.</p>
-<h2 id="in-code-documentation">In-Code Documentation</h2>
-<h2 id="code-etiquite">Code Etiquite</h2>
-<p>You should try to make each component modular, assembling it in a <strong>NEW</strong> scene (Not one of the prexisting ones) whenever possible and exporting it as a prefab. This way whenever someone begins to integrade it with the rest of the project; we can minimize same-scene editing and merge conflicts.</p>
-<p>Your code should use tripple slash comments with XML descriptors for API documentation (Visual Studio can generate this for you).</p>
-<p>You are also required to modify the documentation to describe how to use your new or modified feature in the <a href="../Manual/">Manual</a> section.</p></div>
+<h1 id="entity-statistics">Entity Statistics</h1>
+<p>The <code>Stats</code> component tracks a player or entity's Health, Mana, and Stamina. For simplicity, all agents are assummed to have these stats, but some special agents you create may not use them all.</p>
+<p><code>Stats</code> stores all the raw values as floats (<code>health</code>, <code>mana</code>, <code>stamina</code>) and limits them between 0 and a maximum value (<code>maxHealth</code>, <code>maxMana</code>, <code>maxStamina</code>).</p></div>
             </div>
         </div>
 
