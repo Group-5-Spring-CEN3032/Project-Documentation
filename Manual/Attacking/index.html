@@ -130,7 +130,11 @@
             
             <li class="nav-item" data-level="1"><a href="#attacking" class="nav-link">Attacking</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#modifyable-variables" class="nav-link">Modifyable Variables</a>
+            <li class="nav-item" data-level="2"><a href="#attacking-script" class="nav-link">Attacking Script</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#projectile-script" class="nav-link">Projectile Script</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -143,8 +147,9 @@
 
 <h1 id="attacking">Attacking</h1>
 <p>Our <code>Attacking</code> is a simple amie and fire system to damage the NPCs in the environment.</p>
-<p>This also correlates to the health bar on the NPCs. If the NPC doesn't have a health bar over it, you will not be able to attack it. </p>
-<h2 id="modifyable-variables">Modifyable Variables</h2>
+<p>This also correlates to the health bar on the NPCs. If the NPC doesn't have a health bar over it, you will not be able to attack it.</p>
+<h2 id="attacking-script">Attacking Script</h2>
+<h3 id="modifyable-variables">Modifyable Variables</h3>
 <p>These variables are open to your configuration to customize your controller the attck you want.</p>
 <ul>
 <li><strong>Stats</strong> A reference to the player states.</li>
@@ -152,6 +157,12 @@
 <li><strong>Fire Position</strong> This is the position the projectile will be fire at.</li>
 <li><strong>Speed</strong> This is how fast the projectile shoots out.</li>
 <li><strong>Target Time</strong> This is the cool down time between attacks.</li>
+</ul>
+<h2 id="projectile-script">Projectile Script</h2>
+<p>This is the basic projectile that your attack will use.</p>
+<h3 id="modifyable-variables_1">Modifyable Variables</h3>
+<ul>
+<li><strong>Destroy Time</strong> This is the amount of time it will take before the projectile is destroy if it dosn't hit something.</li>
 </ul></div>
             </div>
         </div>
