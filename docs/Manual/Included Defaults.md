@@ -20,5 +20,10 @@ A simple Main Menu made from Unity canvas components, includes a `MainMenuHelper
 
 **Note:** Qutting the game functions do not work in the editor! (This is a quirk of Unity, there is a warning about it when a quit is requested.)
 
+
+## Pause Menu
+A simple pause menu made from Unity canvas components, makes use of 'ToggleOnPause.cs' for main functionality. The pause menu has seven buttons, though the only two that currently function are the 'Resume' and 'Quit' buttons, which unpause the game and return to the main menu respectively.
+
+
 ## DemoScene
 We've included our own prototye environment that we used to test our own features.
